@@ -1,0 +1,61 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :suite %><br>
+    <%= f.text_field :suite %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :building_type %><br>
+    <%= f.text_field :building_type %>
+  </div>
+  <div class="field">
+    <%= f.label :building_class %><br>
+    <%= f.text_field :building_class %>
+  </div>
+  <div class="field">
+    <%= f.label :asking_rate %><br>
+    <%= f.text_field :asking_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :opex %><br>
+    <%= f.text_field :opex %>
+  </div>
+  <div class="field">
+    <%= f.label :lease_type %><br>
+    <%= f.text_field :lease_type %>
+  </div>
+  <div class="field">
+    <%= f.label :brokerage %><br>
+    <%= f.text_field :brokerage %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

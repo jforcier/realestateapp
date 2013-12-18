@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @comp.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @comp.address %>
+</p>
+
+<p>
+  <strong>Suite:</strong>
+  <%= @comp.suite %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @comp.size %>
+</p>
+
+<p>
+  <strong>Start rate:</strong>
+  <%= @comp.start_rate %>
+</p>
+
+<p>
+  <strong>Effective rate:</strong>
+  <%= @comp.effective_rate %>
+</p>
+
+<p>
+  <strong>Opex:</strong>
+  <%= @comp.opex %>
+</p>
+
+<p>
+  <strong>Lease signed:</strong>
+  <%= @comp.lease_signed %>
+</p>
+
+<p>
+  <strong>Lease start:</strong>
+  <%= @comp.lease_start %>
+</p>
+
+<p>
+  <strong>Lease expiration:</strong>
+  <%= @comp.lease_expiration %>
+</p>
+
+<p>
+  <strong>Tenant:</strong>
+  <%= @comp.tenant %>
+</p>
+
+<p>
+  <strong>Landlord:</strong>
+  <%= @comp.landlord %>
+</p>
+
+<p>
+  <strong>Procurring broker:</strong>
+  <%= @comp.procurring_broker %>
+</p>
+
+<p>
+  <strong>Procurring agent:</strong>
+  <%= @comp.procurring_agent %>
+</p>
+
+<p>
+  <strong>Listing broker:</strong>
+  <%= @comp.listing_broker %>
+</p>
+
+<p>
+  <strong>Listing agent:</strong>
+  <%= @comp.listing_agent %>
+</p>
+
+<%= link_to 'Edit', edit_comp_path(@comp) %> |
+<%= link_to 'Back', comps_path %>

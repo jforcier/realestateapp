@@ -1,0 +1,57 @@
+<h1>Listing comps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Address</th>
+      <th>Suite</th>
+      <th>Size</th>
+      <th>Start rate</th>
+      <th>Effective rate</th>
+      <th>Opex</th>
+      <th>Lease signed</th>
+      <th>Lease start</th>
+      <th>Lease expiration</th>
+      <th>Tenant</th>
+      <th>Landlord</th>
+      <th>Procurring broker</th>
+      <th>Procurring agent</th>
+      <th>Listing broker</th>
+      <th>Listing agent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comps.each do |comp| %>
+      <tr>
+        <td><%= comp.city %></td>
+        <td><%= comp.address %></td>
+        <td><%= comp.suite %></td>
+        <td><%= comp.size %></td>
+        <td><%= comp.start_rate %></td>
+        <td><%= comp.effective_rate %></td>
+        <td><%= comp.opex %></td>
+        <td><%= comp.lease_signed %></td>
+        <td><%= comp.lease_start %></td>
+        <td><%= comp.lease_expiration %></td>
+        <td><%= comp.tenant %></td>
+        <td><%= comp.landlord %></td>
+        <td><%= comp.procurring_broker %></td>
+        <td><%= comp.procurring_agent %></td>
+        <td><%= comp.listing_broker %></td>
+        <td><%= comp.listing_agent %></td>
+        <td><%= link_to 'Show', comp %></td>
+        <td><%= link_to 'Edit', edit_comp_path(comp) %></td>
+        <td><%= link_to 'Destroy', comp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comp', new_comp_path %>

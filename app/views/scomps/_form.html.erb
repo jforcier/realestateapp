@@ -1,0 +1,85 @@
+<%= form_for(@scomp) do |f| %>
+  <% if @scomp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scomp.errors.count, "error") %> prohibited this scomp from being saved:</h2>
+
+      <ul>
+      <% @scomp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_price %><br>
+    <%= f.text_field :sale_price %>
+  </div>
+  <div class="field">
+    <%= f.label :cap_rate %><br>
+    <%= f.text_field :cap_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :closing_date %><br>
+    <%= f.date_select :closing_date %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer %><br>
+    <%= f.text_field :buyer %>
+  </div>
+  <div class="field">
+    <%= f.label :seller %><br>
+    <%= f.text_field :seller %>
+  </div>
+  <div class="field">
+    <%= f.label :building_type %><br>
+    <%= f.text_field :building_type %>
+  </div>
+  <div class="field">
+    <%= f.label :building_class %><br>
+    <%= f.text_field :building_class %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_type %><br>
+    <%= f.text_field :sale_type %>
+  </div>
+  <div class="field">
+    <%= f.label :floors %><br>
+    <%= f.text_field :floors %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_broker %><br>
+    <%= f.text_field :buyer_broker %>
+  </div>
+  <div class="field">
+    <%= f.label :buyer_agent %><br>
+    <%= f.text_field :buyer_agent %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_broker %><br>
+    <%= f.text_field :listing_broker %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_agent %><br>
+    <%= f.text_field :listing_agent %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

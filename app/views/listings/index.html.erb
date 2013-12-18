@@ -1,0 +1,47 @@
+<h1>Lease Listings </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Address</th>
+      <th>Suite</th>
+      <th>Size</th>
+      <th>Building Type</th>
+      <th>Building Class</th>
+      <th>Asking Rate</th>
+      <th>Opex</th>
+      <th>Lease Type</th>
+      <th>Brokerage</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.city %></td>
+        <td><%= listing.address %></td>
+        <td><%= listing.suite %></td>
+        <td><%= listing.size %></td>
+        <td><%= listing.building_type %></td>
+        <td><%= listing.building_class %></td>
+        <td><%= listing.asking_rate %></td>
+        <td><%= listing.opex %></td>
+        <td><%= listing.lease_type %></td>
+        <td><%= listing.brokerage %></td>
+        <td><%= listing.notes %></td>
+        <td><%= link_to 'Show', listing %></td>
+        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lease Listing', new_listing_path %>

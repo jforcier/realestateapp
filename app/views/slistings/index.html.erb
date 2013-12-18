@@ -1,0 +1,47 @@
+<h1>Sale Listings </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Address</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th>Building Type</th>
+      <th>Building Class</th>
+      <th>Sale Type</th>
+      <th>Floors</th>
+      <th>Parking Ratio</th>
+      <th>Brokerage</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slistings.each do |slisting| %>
+      <tr>
+        <td><%= slisting.city %></td>
+        <td><%= slisting.address %></td>
+        <td><%= slisting.size %></td>
+        <td><%= slisting.price %></td>
+        <td><%= slisting.building_type %></td>
+        <td><%= slisting.building_class %></td>
+        <td><%= slisting.sale_type %></td>
+        <td><%= slisting.floors %></td>
+        <td><%= slisting.parking_string %></td>
+        <td><%= slisting.brokerage %></td>
+        <td><%= slisting.notes %></td>
+        <td><%= link_to 'Show', slisting %></td>
+        <td><%= link_to 'Edit', edit_slisting_path(slisting) %></td>
+        <td><%= link_to 'Destroy', slisting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale Listing', new_slisting_path %>

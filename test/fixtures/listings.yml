@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city: MyString
+  address: MyString
+  suite: MyString
+  size: MyString
+  building_type: MyString
+  building_class: MyString
+  asking_rate: MyString
+  opex: MyString
+  lease_type: MyString
+  brokerage: MyString
+  notes: MyText
+
+two:
+  city: MyString
+  address: MyString
+  suite: MyString
+  size: MyString
+  building_type: MyString
+  building_class: MyString
+  asking_rate: MyString
+  opex: MyString
+  lease_type: MyString
+  brokerage: MyString
+  notes: MyText

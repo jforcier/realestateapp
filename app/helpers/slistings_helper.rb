@@ -1,0 +1,2 @@
+module SlistingsHelper
+end

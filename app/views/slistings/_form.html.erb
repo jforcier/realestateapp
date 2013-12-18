@@ -1,0 +1,61 @@
+<%= form_for(@slisting) do |f| %>
+  <% if @slisting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slisting.errors.count, "error") %> prohibited this slisting from being saved:</h2>
+
+      <ul>
+      <% @slisting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :building_type %><br>
+    <%= f.text_field :building_type %>
+  </div>
+  <div class="field">
+    <%= f.label :building_class %><br>
+    <%= f.text_field :building_class %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_type %><br>
+    <%= f.text_field :sale_type %>
+  </div>
+  <div class="field">
+    <%= f.label :floors %><br>
+    <%= f.text_field :floors %>
+  </div>
+  <div class="field">
+    <%= f.label :parking_ratio %><br>
+    <%= f.text_field :parking_string %>
+  </div>
+  <div class="field">
+    <%= f.label :brokerage %><br>
+    <%= f.text_field :brokerage %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

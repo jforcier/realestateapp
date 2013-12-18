@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city: MyString
+  address: MyString
+  size: MyString
+  sale_price: MyString
+  cap_rate: MyString
+  closing_date: 2013-12-17
+  buyer: MyString
+  seller: MyString
+  building_type: MyString
+  building_class: MyString
+  sale_type: MyString
+  floors: MyString
+  buyer_broker: MyString
+  buyer_agent: MyString
+  listing_broker: MyString
+  listing_agent: MyString
+  notes: MyText
+
+two:
+  city: MyString
+  address: MyString
+  size: MyString
+  sale_price: MyString
+  cap_rate: MyString
+  closing_date: 2013-12-17
+  buyer: MyString
+  seller: MyString
+  building_type: MyString
+  building_class: MyString
+  sale_type: MyString
+  floors: MyString
+  buyer_broker: MyString
+  buyer_agent: MyString
+  listing_broker: MyString
+  listing_agent: MyString
+  notes: MyText

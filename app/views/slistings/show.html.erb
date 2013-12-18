@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @slisting.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @slisting.address %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @slisting.size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @slisting.price %>
+</p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @slisting.building_type %>
+</p>
+
+<p>
+  <strong>Building class:</strong>
+  <%= @slisting.building_class %>
+</p>
+
+<p>
+  <strong>Sale type:</strong>
+  <%= @slisting.sale_type %>
+</p>
+
+<p>
+  <strong>Floors:</strong>
+  <%= @slisting.floors %>
+</p>
+
+<p>
+  <strong>Parking string:</strong>
+  <%= @slisting.parking_string %>
+</p>
+
+<p>
+  <strong>Brokerage:</strong>
+  <%= @slisting.brokerage %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @slisting.notes %>
+</p>
+
+<%= link_to 'Edit', edit_slisting_path(@slisting) %> |
+<%= link_to 'Back', slistings_path %>

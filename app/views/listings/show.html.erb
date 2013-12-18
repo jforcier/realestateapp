@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @listing.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @listing.address %>
+</p>
+
+<p>
+  <strong>Suite:</strong>
+  <%= @listing.suite %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @listing.size %>
+</p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @listing.building_type %>
+</p>
+
+<p>
+  <strong>Building class:</strong>
+  <%= @listing.building_class %>
+</p>
+
+<p>
+  <strong>Asking rate:</strong>
+  <%= @listing.asking_rate %>
+</p>
+
+<p>
+  <strong>Opex:</strong>
+  <%= @listing.opex %>
+</p>
+
+<p>
+  <strong>Lease type:</strong>
+  <%= @listing.lease_type %>
+</p>
+
+<p>
+  <strong>Brokerage:</strong>
+  <%= @listing.brokerage %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @listing.notes %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

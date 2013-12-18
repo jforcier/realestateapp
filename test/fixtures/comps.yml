@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city: MyString
+  address: MyString
+  suite: MyString
+  size: MyString
+  start_rate: MyString
+  effective_rate: MyString
+  opex: MyString
+  lease_signed: 2013-12-17
+  lease_start: 2013-12-17
+  lease_expiration: 2013-12-17
+  tenant: MyString
+  landlord: MyString
+  procurring_broker: MyString
+  procurring_agent: MyString
+  listing_broker: MyString
+  listing_agent: MyString
+
+two:
+  city: MyString
+  address: MyString
+  suite: MyString
+  size: MyString
+  start_rate: MyString
+  effective_rate: MyString
+  opex: MyString
+  lease_signed: 2013-12-17
+  lease_start: 2013-12-17
+  lease_expiration: 2013-12-17
+  tenant: MyString
+  landlord: MyString
+  procurring_broker: MyString
+  procurring_agent: MyString
+  listing_broker: MyString
+  listing_agent: MyString
