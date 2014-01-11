@@ -1,1 +1,86 @@
-my_profile.html.erb
+<div class="row">
+  <div class="col-md-12"><%= render 'layouts/nav' %></div>
+<div class="row">
+
+  <div class="col-md-6">
+  	<div class="page-header">
+  		<h3> New Listings </h3>
+  	<body>
+  	</div>
+  	<img class="pull-left" src="http://placehold.it/150x150"/>
+  		<table class="table table-condensed">
+  			<tr>
+  				<td><strong> Building Address </strong> </td>
+  				<td> 2804 Mission College Blvd </td>
+  			</tr>
+  			<tr>
+  				<td><strong> Available SF </strong> </td>
+  				<td> 10,500 SF </td>
+  			<tr>
+  				<td><strong> Asking Rate </strong> </td>
+  				<td> $2.50 Full Service </td>
+  			</tr>
+  			<tr>
+  				<td><strong> Notes </strong> </td>
+  				<td> Class A office. Creative Interiors. Availabe Q'1-14 </td>
+  			</tr>
+  		</table>
+
+  </div>
+
+
+
+  <div class="col-md-6">
+  	<div class="page-header">
+  		<h3> New Comps </h3>
+  	</div>
+<img class="pull-left" src="http://placehold.it/150x150"/>
+
+	<table class="table table-condensed">
+  			<tr>
+  				<td><strong> Building Address </strong> </td>
+  				<td> 2804 Mission College Blvd </td>
+  				<td><strong> Tenant </strong> </td>
+  				<td> DICE </td>
+  				<td><strong> Owner </strong> </td>
+  				<td> Rubicon Partners </td>
+  			</tr>
+  			<tr>
+  				<td><strong> Size (SF) </strong> </td>
+  				<td> 7,500 SF </td>
+  				<td><strong> Lease Rate </strong> </td>
+  				<td> $2.28 Full Service </td>
+  				<td></td>
+  				<td></td>
+  			</tr>
+  			<tr>
+  				<td><strong> Lease Term </strong> </td>
+  				<td> 36 Months </td>
+  				<td><strong> Occupancy Date </strong> </td>
+  				<td> 10/1/13 </td>
+  				<td><strong> Expiration Date </strong> </td>
+  				<td> 9/31/16 </td>
+  			</tr>
+
+  	</table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+  	<h3> Commercial Real Estate Headlines </h3>
+ </div>
+
+ <div class="row">
+  <div class="col-md-12">
+
+<ul class="nav nav-tabs">
+  <li class="active">
+  	<li><%= link_to "Local News", my_profile_path %></li>
+  	<li><%= link_to "Regional News", my_profile_path %></li>
+  	<li><%= link_to "National News", my_profile_path %></li>
+  	<li><%= link_to "International News", my_profile_path %></li>
+</ul>
+
+  </div>

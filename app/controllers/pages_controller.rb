@@ -13,6 +13,8 @@ class PagesController < ApplicationController
   end
 
   def for_lease
+    @search = Listing.search(params[:q])
+    @listings = @search.result
   end
 
   def lease_comps
@@ -28,6 +30,7 @@ class PagesController < ApplicationController
   end
 
   def my_listings
+    @listings = current_user.listings
   end
 
   def current_deals

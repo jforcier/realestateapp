@@ -29,9 +29,14 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass', :github => 'thomas-mcdonald/bootstrap-sass'
 
+gem 'devise', '~> 3.1.1'
+
+gem 'ransack'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+
 end
 
 # Use ActiveModel has_secure_password

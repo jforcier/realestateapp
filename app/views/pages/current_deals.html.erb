@@ -1,1 +1,7 @@
-current_deals.html.erb
+<%= render 'layouts/nav' %>
+<ul class="nav nav-pills">
+		<li><%= link_to 'New Tenant', new_listing_path %></li>
+		<li><%= link_to 'New Landlord', new_slisting_path %></li>
+		<li><%= link_to 'Tenant Rep', "for_lease"%></li>
+		<li><%= link_to 'Landlord Rep', "for_sale"%></li>
+	</ul>

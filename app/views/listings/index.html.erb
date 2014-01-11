@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Agent</th>
       <th>City</th>
       <th>Address</th>
       <th>Suite</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
+        <td><%= listing.user.name if listing.user %></td>
         <td><%= listing.city %></td>
         <td><%= listing.address %></td>
         <td><%= listing.suite %></td>
@@ -35,13 +37,17 @@
         <td><%= listing.brokerage %></td>
         <td><%= listing.notes %></td>
         <td><%= link_to 'Show', listing %></td>
+        <% if listing.user == current_user %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Lease Listing', new_listing_path %>
+<% end %>

@@ -1,4 +1,5 @@
 Realestateapp::Application.routes.draw do
+  devise_for :users
   resources :scomps
 
   resources :comps
