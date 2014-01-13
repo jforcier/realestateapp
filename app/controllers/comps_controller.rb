@@ -4,12 +4,14 @@ class CompsController < ApplicationController
   # GET /comps
   # GET /comps.json
   def index
-    @comps = Comp.all
+    @search = Comp.search(params[:q])
+    @comps = @search.result
   end
 
   # GET /comps/1
   # GET /comps/1.json
   def show
+
   end
 
   # GET /comps/new
@@ -69,6 +71,6 @@ class CompsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comp_params
-      params.require(:comp).permit(:city, :address, :suite, :size, :start_rate, :effective_rate, :opex, :lease_signed, :lease_start, :lease_expiration, :tenant, :landlord, :procurring_broker, :procurring_agent, :listing_broker, :listing_agent)
+      params.require(:comp).permit(:image, :city, :address, :suite, :size, :start_rate, :effective_rate, :opex, :lease_signed, :lease_start, :lease_expiration, :tenant, :landlord, :procurring_broker, :procurring_agent, :listing_broker, :listing_agent)
     end
 end

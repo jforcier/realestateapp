@@ -1,4 +1,4 @@
-<%= form_for(@comp) do |f| %>
+<%= form_for @comp, html: { multipart: true } do |f| %>
   <% if @comp.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comp.errors.count, "error") %> prohibited this comp from being saved:</h2>
@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+ <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  
   <div class="field">
     <%= f.label :city %><br>
     <%= f.text_field :city %>

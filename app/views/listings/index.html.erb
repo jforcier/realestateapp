@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Agent</th>
       <th>City</th>
       <th>Address</th>
@@ -24,6 +25,7 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
+        <td><%= image_tag listing.image.url(:thumb) %></td>
         <td><%= listing.user.name if listing.user %></td>
         <td><%= listing.city %></td>
         <td><%= listing.address %></td>

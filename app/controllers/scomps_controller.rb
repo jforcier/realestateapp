@@ -4,7 +4,8 @@ class ScompsController < ApplicationController
   # GET /scomps
   # GET /scomps.json
   def index
-    @scomps = Scomp.all
+    @search = Scomp.search(params[:q])
+    @scomps = @search.result
   end
 
   # GET /scomps/1
@@ -69,6 +70,6 @@ class ScompsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scomp_params
-      params.require(:scomp).permit(:city, :address, :size, :sale_price, :cap_rate, :closing_date, :buyer, :seller, :building_type, :building_class, :sale_type, :floors, :buyer_broker, :buyer_agent, :listing_broker, :listing_agent, :notes)
+      params.require(:scomp).permit(:image, :city, :address, :size, :sale_price, :cap_rate, :closing_date, :buyer, :seller, :building_type, :building_class, :sale_type, :floors, :buyer_broker, :buyer_agent, :listing_broker, :listing_agent, :notes)
     end
 end

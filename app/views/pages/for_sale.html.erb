@@ -3,3 +3,87 @@
  </div>
 	<div class="row">
 		<%= render 'layouts/dbsearch' %></div>
+
+  <div class="row top-buffer">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Search Buildings for Sale</h3>
+				</div>
+			<div class="panel-body">
+
+
+<%= search_form_for @search do |f| %>
+
+<!-- City Search -->
+<div class="row top-buffer">
+  <div class="field-group">
+  	<div class="col-sm-2">
+    <%= f.label :city_cont, "City" %>
+</div>
+	<div class="col-md-3">
+    <%= f.text_field :city_cont %>
+</div>
+  </div>
+</div>
+
+ <!-- Address -->
+ <div class="row top-buffer">
+  <div class="field-group">
+  	<div class="col-sm-2">
+    <%= f.label :address_cont, "Address" %>
+</div>
+<div class="col-md-4">
+    <%= f.text_field :address_cont %>
+</div>
+  </div>
+</div>
+
+  <!-- Building Type -->
+  <div class="row top-buffer">
+  <div class="field-group">
+  	<div class="col-sm-2">
+    <%= f.label :building_type_cont, "Building Class" %>
+</div>
+<div class="col-md-4">
+    <%= f.text_field :building_type_cont %>
+</div>
+</div>
+</div>
+
+<!-- Size (sf) -->
+<div class="row top-buffer">
+  <div class="field-group">
+  	<div class="col-sm-2">
+    <%= f.label :size_gteq, "Minimum Size (sf)" %>
+</div>
+<div class="col-sm-2">
+    <%= f.text_field :size_gteq %>
+  </div>
+    <%= f.label :size_lteq, "Maximum Size (sf)" %>
+    <%= f.text_field :size_lteq %>
+  </div>
+</div>
+  <!-- Asking Rate -->
+  <div class="row top-buffer">
+   <div class="field-group">
+   	<div class="col-sm-2">
+      <%= f.label :price_gteq, "Minimum Price ($)" %>
+  </div>
+  <div class="col-sm-2">
+      <%= f.text_field :price_gteq %>
+  </div>
+      <%= f.label :price_lteq, "Maximum Price ($)" %>
+      <%= f.text_field :price_lteq %>
+    </div>
+</div>
+
+<!-- Search Button -->
+  <div class="actions">
+  	<%= f.submit "Search" %></div>
+<% end %>
+
+</div>
+</div>
+</div>

@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Image:</strong>
+  <%= image_tag @comp.image.url(:medium) %>
+</p>
+<p>
   <strong>City:</strong>
   <%= @comp.city %>
 </p>

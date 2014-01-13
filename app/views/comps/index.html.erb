@@ -1,8 +1,10 @@
-<h1>Listing comps</h1>
+<h1>Lease Comps</h1>
+
 
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>City</th>
       <th>Address</th>
       <th>Suite</th>
@@ -28,6 +30,7 @@
   <tbody>
     <% @comps.each do |comp| %>
       <tr>
+        <td><%= image_tag comp.image.url(:thumb) %></td>
         <td><%= comp.city %></td>
         <td><%= comp.address %></td>
         <td><%= comp.suite %></td>

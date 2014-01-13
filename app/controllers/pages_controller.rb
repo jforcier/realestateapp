@@ -18,12 +18,18 @@ class PagesController < ApplicationController
   end
 
   def lease_comps
+    @search = Comp.search(params[:q])
+    @comps = @search.result
   end
 
   def for_sale
+    @search = Slisting.search(params[:q])
+    @slistings = @search.result
   end
 
   def sale_comps
+    @search = Scomp.search(params[:q])
+    @scomps = @search.result
   end
 
   def property_directory

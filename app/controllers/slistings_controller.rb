@@ -4,7 +4,8 @@ class SlistingsController < ApplicationController
   # GET /slistings
   # GET /slistings.json
   def index
-    @slistings = Slisting.all
+    @search = Slisting.search(params[:q])
+    @slistings = @search.result
   end
 
   # GET /slistings/1
@@ -69,6 +70,6 @@ class SlistingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slisting_params
-      params.require(:slisting).permit(:city, :address, :size, :price, :building_type, :building_class, :sale_type, :floors, :parking_string, :brokerage, :notes)
+      params.require(:slisting).permit(:image, :city, :address, :size, :price, :building_type, :building_class, :sale_type, :floors, :parking_string, :brokerage, :notes)
     end
 end

@@ -1,8 +1,9 @@
-<h1>Listing scomps</h1>
+<h1>Sale Comps</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>City</th>
       <th>Address</th>
       <th>Size</th>
@@ -29,6 +30,7 @@
   <tbody>
     <% @scomps.each do |scomp| %>
       <tr>
+        <td><%= image_tag scomp.image.url(:thumb) %></td>
         <td><%= scomp.city %></td>
         <td><%= scomp.address %></td>
         <td><%= scomp.size %></td>
