@@ -21,6 +21,18 @@ Realestateapp::Application.routes.draw do
   get "current_deals" => "pages#current_deals"
   get "closed_deals" => "pages#closed_deals"
   get "accounts_receivable" => "pages#accounts_receivable"
+  get "tenant_rep" => "pages#tenant_rep"
+  get "landlord_rep" => "pages#landlord_rep"
+  get "bitcasa" => "pages#bitcasa"
+  get "gameclosure" => "pages#gameclosure"
+  get "startx" => "pages#startx"
+  get "ccc" => "pages#ccc"
+  get "scc" => "pages#scc"
+  get "gatowers" => "pages#gatowers"
+  get "recently_closed" => "pages#recently_closed"
+  get "upcoming_exp" => "pages#upcoming_exp"
+  get "create_invoice" => "pages#create_invoice"
+  get "commissions" => "pages#commissions"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

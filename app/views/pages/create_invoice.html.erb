@@ -1,0 +1,179 @@
+<div class="row">
+  <div class="col-md-12"><%= render 'layouts/nav' %></div>
+ </div>
+
+
+<div class ="row top-buffer">
+<div class="container">
+	<div class="col-md-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Deal Summary</h3>
+		</div>
+<div class="panel-body">
+<form class="form-horizontal" role="form">
+
+<!-- Deal Type -->
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> Lease/Sale </label>
+    <div class="col-md-2">
+	<select class="form-control">
+    	<option>Lease</option>
+    	<option>Sale</option>
+	</select>
+</div>
+</div>
+
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> Deal Type </label>
+    <div class="col-md-2">
+	<select class="form-control">
+    	<option>New</option>
+    	<option>Renewal</option>
+    	<option>Sublease</option>
+    	<option>Expansion</option>
+	</select>
+</div>
+</div>
+
+<!-- Address -->
+ <div class="form-group">
+    <label for="inputAddress" class="col-md-2 control-label"> Address </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputAddress" placeholder="Enter Address">
+    </div>
+  
+ <!-- City Search -->
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputCity" placeholder="Enter City">
+    </div>
+
+ <!-- Zip -->
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputZip" placeholder="Enter Zip">
+    </div>
+   </div>
+
+ <!-- Unit -->
+ <div class="form-group">
+    <label for="inputUnit" class="col-md-2 control-label"> Suite # </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputAddress" placeholder="Enter Suite #">
+    </div>
+</div>
+
+<!-- Size  -->
+<div class="form-group">
+    <label for="inputSize" class="col-md-2 control-label"> Size (sf) </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Size">
+    </div>
+</div>
+<!-- Tenant & Landlord  -->
+<div class="form-group">
+    <label for="inputSize" class="col-md-2 control-label"> Tenant </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Tenant">
+    </div>
+
+    <label for="inputSize" class="col-md-2 control-label"> Landlord </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Landlord">
+    </div>
+</div>
+<!-- Term & Free Rent  -->
+<div class="form-group">
+    <label for="inputSize" class="col-md-2 control-label"> Lease Term </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Term">
+    </div>
+    
+    <label for="inputSize" class="col-md-2 control-label"> Free Rent </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Free Rent">
+    </div>
+</div>
+
+<!-- Base & Effective rent  -->
+<div class="form-group">
+    <label for="inputSize" class="col-md-2 control-label"> Base Rent </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Base Rent">
+    </div>
+    
+    <label for="inputSize" class="col-md-2 control-label"> Effective Rent </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Effective Rent">
+    </div>
+</div>
+<!-- Lease type & TI's  -->
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> Deal Type </label>
+    <div class="col-md-2">
+	<select class="form-control">
+    	<option>NNN</option>
+    	<option>Full Service</option>
+    	<option>Gross</option>
+	</select>
+</div>
+    
+    <label for="inputSize" class="col-md-2 control-label"> TI's $ </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Enter Allowance">
+    </div>
+</div>
+
+<!-- Start & Expiration Date  -->
+
+   <div class="form-group">
+    <label for="inputSize" class="col-md-2 control-label"> Start Date </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Expiration Date">
+    </div>
+
+    <label for="inputSize" class="col-md-2 control-label"> Expiration Date </label>
+    <div class="col-md-2">
+      <input type="search" class="form-control" id="inputSize" placeholder="Expiration Date">
+    </div>
+</div>
+
+
+<!-- Options -->
+
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> Option to Renew </label>
+    <div class="col-md-2">
+	<select class="form-control">
+    	<option>Yes</option>
+    	<option>No</option>
+	</select>
+</div>
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> Right to Terminate </label>
+    <div class="col-md-1">
+	<select class="form-control">
+    	<option>Yes</option>
+    	<option>No</option>
+	</select>
+</div>
+<div class="form-group">
+	<label for="inputCity" class="col-md-2 control-label"> First Refusal </label>
+    <div class="col-md-1">
+	<select class="form-control">
+    	<option>Yes</option>
+    	<option>No</option>
+	</select>
+</div>
+</div>
+
+<!-- Search Button -->
+
+<div class="form-group">
+    <div class="col-sm-offset-5 col-sm-7">
+     <%= link_to "Commissions", commissions_path, class: "btn btn-success btn-lg" %>
+     </div>
+</div>
+</div>
+</form>
+</div>
+</div>

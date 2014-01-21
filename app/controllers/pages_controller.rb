@@ -42,10 +42,48 @@ class PagesController < ApplicationController
   def current_deals
   end
 
+  def tenant_rep
+  end
+
+  def landlord_rep
+  end
+
+  def ccc
+  end
+
+  def scc
+  end
+
+  def gatowers
+  end
+
+  def recently_closed
+  end
+
+  def upcoming_exp
+  end
+
+  def bitcasa
+  end
+
+  def gameclosure
+  end
+
+  def startx
+  end
+  
   def closed_deals
   end
 
   def accounts_receivable
   end
+
+  def create_invoice
+  end
+
+  def commissions
+  end
+  
+
   
 end
