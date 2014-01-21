@@ -1,29 +1,27 @@
 <h1>Sale Comps</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Image</th>
       <th>City</th>
       <th>Address</th>
       <th>Size</th>
-      <th>Sale price</th>
-      <th>Cap rate</th>
-      <th>Closing date</th>
+      <th>Sale Price</th>
+      <th>Cap Rate</th>
+      <th>Closing Date</th>
       <th>Buyer</th>
       <th>Seller</th>
-      <th>Building type</th>
-      <th>Building class</th>
-      <th>Sale type</th>
+      <th>Building Type</th>
+      <th>Building Class</th>
+      <th>Sale Type</th>
       <th>Floors</th>
-      <th>Buyer broker</th>
-      <th>Buyer agent</th>
-      <th>Listing broker</th>
-      <th>Listing agent</th>
+      <th>Buyer Broker</th>
+      <th>Buyer Agent</th>
+      <th>Listing Broker</th>
+      <th>Listing Agent</th>
       <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
+
     </tr>
   </thead>
 
@@ -31,23 +29,23 @@
     <% @scomps.each do |scomp| %>
       <tr>
         <td><%= image_tag scomp.image.url(:thumb) %></td>
-        <td><%= scomp.city %></td>
-        <td><%= scomp.address %></td>
-        <td><%= scomp.size %></td>
-        <td><%= scomp.sale_price %></td>
-        <td><%= scomp.cap_rate %></td>
-        <td><%= scomp.closing_date %></td>
-        <td><%= scomp.buyer %></td>
-        <td><%= scomp.seller %></td>
-        <td><%= scomp.building_type %></td>
-        <td><%= scomp.building_class %></td>
-        <td><%= scomp.sale_type %></td>
-        <td><%= scomp.floors %></td>
-        <td><%= scomp.buyer_broker %></td>
-        <td><%= scomp.buyer_agent %></td>
-        <td><%= scomp.listing_broker %></td>
-        <td><%= scomp.listing_agent %></td>
-        <td><%= scomp.notes %></td>
+        <td><small><%= scomp.city %></small></td>
+        <td><small><%= scomp.address %></small></td>
+        <td><small><%= scomp.size %></small></td>
+        <td><small><%= scomp.sale_price %></small></td>
+        <td><small><%= scomp.cap_rate %></small></td>
+        <td><small><%= scomp.closing_date %></small></td>
+        <td><small><%= scomp.buyer %></small></td>
+        <td><small><%= scomp.seller %></small></td>
+        <td><small><%= scomp.building_type %></small></td>
+        <td><small><%= scomp.building_class %></small></td>
+        <td><small><%= scomp.sale_type %></small></td>
+        <td><small><%= scomp.floors %></small></td>
+        <td><small><%= scomp.buyer_broker %></small></td>
+        <td><small><%= scomp.buyer_agent %></small></td>
+        <td><small><%= scomp.listing_broker %></small></td>
+        <td><small><%= scomp.listing_agent %></small></td>
+        <td><small><%= scomp.notes %></small></td>
         <td><%= link_to 'Show', scomp %></td>
         <td><%= link_to 'Edit', edit_scomp_path(scomp) %></td>
         <td><%= link_to 'Destroy', scomp, method: :delete, data: { confirm: 'Are you sure?' } %></td>

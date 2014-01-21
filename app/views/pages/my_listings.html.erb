@@ -7,7 +7,7 @@
 <h1>My Listings </h1>
 </div>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Image</th>
@@ -23,9 +23,6 @@
       <th>Lease Type</th>
       <th>Brokerage</th>
       <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -33,19 +30,19 @@
     <% @listings.each do |listing| %>
       <tr>
         <td><%= image_tag listing.image.url(:thumb) %></td>
-        <td><%= listing.user.name if listing.user %></td>
-        <td><%= listing.city %></td>
-        <td><%= listing.address %></td>
-        <td><%= listing.suite %></td>
-        <td><%= listing.size %></td>
-        <td><%= listing.building_type %></td>
-        <td><%= listing.building_class %></td>
-        <td><%= listing.asking_rate %></td>
-        <td><%= listing.opex %></td>
-        <td><%= listing.lease_type %></td>
-        <td><%= listing.brokerage %></td>
-        <td><%= listing.notes %></td>
-        <td><%= link_to 'Show', listing %></td>
+        <td><small><%= listing.user.name if listing.user %></small></td>
+        <td><small><%= listing.city %></small></td>
+        <td><small><%= listing.address %></small></td>
+        <td><small><%= listing.suite %></small></td>
+        <td><small><%= listing.size %></small></td>
+        <td><small><%= listing.building_type %></small></td>
+        <td><small><%= listing.building_class %></small></td>
+        <td><small><%= listing.asking_rate %></small></td>
+        <td><small><%= listing.opex %></small></td>
+        <td><small><%= listing.lease_type %></small></td>
+        <td><small><%= listing.brokerage %></small></td>
+        <td><small><%= listing.notes %></small></td>
+        <td><small><%= link_to 'Show', listing %></td>
         <% if listing.user == current_user %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>

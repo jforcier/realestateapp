@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'Back', slistings_path %>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @slisting.image.url(:medium) %>
-</p>
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading center">
+        <%= image_tag @slisting.image.url(:medium) %>
+      </div>
+      <div class="panel-body">
+
 
 <p>
   <strong>City:</strong>
@@ -60,5 +65,11 @@
   <%= @slisting.notes %>
 </p>
 
+<% if @slisting.user == current_user %>
 <%= link_to 'Edit', edit_slisting_path(@slisting) %> |
-<%= link_to 'Back', slistings_path %>
+<% end %>
+
+       </div>
+      </div>
+    </div>
+  </div>

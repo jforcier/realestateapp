@@ -1,6 +1,6 @@
 <h1>Sale Listings </h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Image</th>
@@ -15,9 +15,6 @@
       <th>Parking Ratio</th>
       <th>Brokerage</th>
       <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -25,17 +22,17 @@
     <% @slistings.each do |slisting| %>
       <tr>
         <td><%= image_tag slisting.image.url(:thumb) %></td>
-        <td><%= slisting.city %></td>
-        <td><%= slisting.address %></td>
-        <td><%= slisting.size %></td>
-        <td><%= slisting.price %></td>
-        <td><%= slisting.building_type %></td>
-        <td><%= slisting.building_class %></td>
-        <td><%= slisting.sale_type %></td>
-        <td><%= slisting.floors %></td>
-        <td><%= slisting.parking_string %></td>
-        <td><%= slisting.brokerage %></td>
-        <td><%= slisting.notes %></td>
+        <td><small><%= slisting.city %></small></td>
+        <td><small><%= slisting.address %></small></td>
+        <td><small><%= slisting.size %></small></td>
+        <td><small><%= slisting.price %></small></td>
+        <td><small><%= slisting.building_type %></small></td>
+        <td><small><%= slisting.building_class %></small></td>
+        <td><small><%= slisting.sale_type %></small></td>
+        <td><small><%= slisting.floors %></small></td>
+        <td><small><%= slisting.parking_string %></small></td>
+        <td><small><%= slisting.brokerage %></small></td>
+        <td><small><%= slisting.notes %></small></td>
         <td><%= link_to 'Show', slisting %></td>
         <td><%= link_to 'Edit', edit_slisting_path(slisting) %></td>
         <td><%= link_to 'Destroy', slisting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
