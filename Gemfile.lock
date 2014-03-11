@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/rweng/jquery-datatables-rails.git
+  revision: 788a7b24caf8fe58a5493aa3f6a065879a9f752a
+  specs:
+    jquery-datatables-rails (1.12.2)
+      jquery-rails
+      sass-rails
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: b9bb1967d3e8c3e0f95a6253273affbd6e80eba9
   specs:
@@ -55,6 +63,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -66,6 +76,8 @@ GEM
     jquery-turbolinks (2.0.1)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (4.2.0)
+      railties (>= 3.2.16)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -145,6 +157,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
@@ -153,9 +166,12 @@ DEPENDENCIES
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
   devise (~> 3.1.1)
+  font-awesome-rails (~> 4.0.3.1)
   jbuilder (~> 1.2)
+  jquery-datatables-rails!
   jquery-rails
   jquery-turbolinks
+  jquery-ui-rails
   masonry-rails (~> 0.2.0)
   paperclip (~> 3.0)
   pg
@@ -166,3 +182,4 @@ DEPENDENCIES
   sdoc
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate

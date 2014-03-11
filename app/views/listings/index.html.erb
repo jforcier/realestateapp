@@ -3,17 +3,17 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Exterior Image</th>
-      <th>Agent</th>
-      <th>City</th>
+      <th></th>
+      <th><%= sort_link @search, :agent, "Agent Name" %></th>
+      <th><%= sort_link @search, :city, "City" %></th>
       <th>Address</th>
       <th>Suite</th>
       <th>Size</th>
       <th>Style</th>
       <th>Class</th>
-      <th>Asking Rate</th>
-      <th>Opex</th>
       <th>Lease Type</th>
+      <th><%= sort_link @search, :asking_Rate, "Asking Rate" %></th>
+      <th>Opex</th>
     </tr>
   </thead>
 
@@ -28,9 +28,9 @@
         <td><small><%= listing.size %></small></td>
         <td><small><%= listing.building_type %></small></td>
         <td><small><%= listing.building_class %></small></td>
+        <td><small><%= listing.lease_type %></small></td>
         <td><small><%= listing.asking_rate %></small></td>
         <td><small><%= listing.opex %></small></td>
-        <td><small><%= listing.lease_type %></small></td>
         <td><%= link_to 'Show', listing %></td>
         <% if listing.user == current_user %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>

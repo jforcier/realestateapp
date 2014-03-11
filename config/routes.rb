@@ -33,6 +33,13 @@ Realestateapp::Application.routes.draw do
   get "upcoming_exp" => "pages#upcoming_exp"
   get "create_invoice" => "pages#create_invoice"
   get "commissions" => "pages#commissions"
+  get "local" => "pages#local"
+  get "national" => "pages#national"
+  get "regional" => "pages#regional"
+  get "international" => "pages#international"
+  get "dashboard" => "pages#dashboard"
+  get "pipeline" => "pages#pipeline"
+  get "detail" => "pages#detail"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

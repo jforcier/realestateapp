@@ -1,28 +1,65 @@
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 sidebar">
+          <div class="row placeholders">
+          
+          <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
+            <h4>Jason Forcier</h4>
+              <span class="text-muted">Cornish & Carey</span>
+            </div>
+          <ul class="nav nav-sidebar">
+            <li><%= link_to "Performance Overview", dashboard_path %></li>
+            <li><%= link_to "Pipeline Overview", pipeline_path %></li>
+            <li><%= link_to "Search Database", for_lease_path %></li>
+            <li><%= link_to "My Listings", my_listings_path %></li>
+            <li><a href="#">Current Deals</a></li>
+            <li><a href="#">Recently Closed</a></li>
+            <li><a href="#">New Listings</a></li>
+            <li><a href="#">New Comps</a></li>
+            <li><a href="#">Transcation History</a></li>
+            <li><a href="#">Accounts Receivable</a></li>
+             <li><a href="#">News</a></li>
+          </ul>
+          </div>
+<!-- Sidebar Nav -->
+<!-- Dashboard Header -->
 <div class="row">
-  <div class="col-md-12"><%= render 'layouts/nav' %></div>
- </div>
-	<div class="row">
-		<%= render 'layouts/dbsearch' %></div>
+        <div class="col-md-10 col-md-offset-2">
+          <h1 class="page-header">Search Database</h1>
+        </div>
+      </div>
+<!--navtab-->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <ul class="nav nav-tabs">
+    <li><%= link_to "For Lease", "for_lease"%></li>
+    <li><%= link_to "Lease Comps", "lease_comps"%></li>
+    <li class="active"><%= link_to "For Sale", "for_sale"%></li>
+    <li><%= link_to "Sale Comps", "sale_comps"%></li>
+    <li><%= link_to "Property Directory", "property_directory"%></li>
+  </ul> <!--navtabs-->
+  </div> <!--column-->
+</div> <!--row-->
 
-  <div class="row top-buffer">
-	<div class="container">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Search Buildings for Sale</h3>
-				</div>
-			<div class="panel-body">
+<!--forleasetabl-->
+<div class="row top-buffer">
+   <div class="col-md-10 col-md-offset-2">
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Search Buildings For Sale</h3>
+      </div>
+    <div class="panel-body">
 
 <%= search_form_for @search do |f| %>
 
 <!-- City Search -->
 <div class="row top-buffer">
   <div class="field-group">
-  	<div class="col-sm-2">
+    <div class="col-sm-2">
     <%= f.label :city_cont, "City" %>
 </div>
-	<div class="col-md-3">
+  <div class="col-md-3">
     <%= f.text_field :city_cont %>
 </div>
   </div>
@@ -31,7 +68,7 @@
  <!-- Address -->
  <div class="row top-buffer">
   <div class="field-group">
-  	<div class="col-sm-2">
+    <div class="col-sm-2">
     <%= f.label :address_cont, "Address" %>
 </div>
 <div class="col-md-4">
@@ -43,7 +80,7 @@
   <!-- Building Type -->
   <div class="row top-buffer">
   <div class="field-group">
-  	<div class="col-sm-2">
+    <div class="col-sm-2">
     <%= f.label :building_type_cont, "Building Class" %>
 </div>
 <div class="col-md-4">
@@ -55,10 +92,10 @@
 <!-- Size (sf) -->
 <div class="row top-buffer">
   <div class="field-group">
-  	<div class="col-sm-2">
+    <div class="col-sm-2">
     <%= f.label :size_gteq, "Minimum Size (sf)" %>
 </div>
-<div class="col-sm-2">
+<div class="col-sm-3">
     <%= f.text_field :size_gteq %>
   </div>
     <%= f.label :size_lteq, "Maximum Size (sf)" %>
@@ -68,10 +105,10 @@
   <!-- Asking Rate -->
   <div class="row top-buffer">
    <div class="field-group">
-   	<div class="col-sm-2">
+    <div class="col-sm-2">
       <%= f.label :price_gteq, "Minimum Price ($)" %>
   </div>
-  <div class="col-sm-2">
+  <div class="col-sm-3">
       <%= f.text_field :price_gteq %>
   </div>
       <%= f.label :price_lteq, "Maximum Price ($)" %>
@@ -81,9 +118,10 @@
 
 <!-- Search Button -->
   <div class="actions">
-  	<%= f.submit "Search" %></div>
+    <%= f.submit "Search" %></div>
 <% end %>
 
 </div>
 </div>
 </div>
+</div> <!--column-->

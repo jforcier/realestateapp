@@ -40,6 +40,17 @@ gem 'paperclip', '~> 3.0'
 
 gem 'masonry-rails', '~> 0.2.0'
 
+gem "font-awesome-rails", "~> 4.0.3.1"
+
+group :assets do
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+  gem 'jquery-ui-rails'
+end
+
+gem 'will_paginate'
+
+
+
 group :production do
 	gem 'rails_12factor'
 end

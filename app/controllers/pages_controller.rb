@@ -8,6 +8,12 @@ class PagesController < ApplicationController
   def my_profile
   end
 
+  def dashboard
+  end
+
+  def pipeline
+  end
+
   def search_database
   	
   end
@@ -84,6 +90,21 @@ class PagesController < ApplicationController
   def commissions
   end
   
+  def local
+  end
+
+  def regional
+  end
+
+  def national
+  end
+
+  def international
+  end
+  
+  def detail
+  end
+
 
   
 end
