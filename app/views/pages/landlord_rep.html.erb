@@ -13,10 +13,9 @@
             <li><%= link_to "Search Database", for_lease_path %></li>
             <li><%= link_to "My Listings", my_listings_path %></li>
             <li><%= link_to "Current Deals", current_deals_path %></li>
-            <li><a href="#">Recently Closed</a></li>
             <li><a href="#">New Listings</a></li>
             <li><a href="#">New Comps</a></li>
-            <li><a href="#">Transcation History</a></li>
+            <li><%= link_to "Transaction History", closed_deals_path %></li>
             <li><a href="#">Accounts Receivable</a></li>
              <li><a href="#">News</a></li>
           </ul>
@@ -52,7 +51,7 @@
 
     <ul class="nav nav-tabs">
       <p><strong>Property Name (Click on Address to Open)</strong></p>
-      <li><%= link_to 'Cupertino City Center', ccc_path %></li>
+      <li class="active"><%= link_to 'Cupertino City Center', ccc_path %></li>
       <li><%= link_to 'Santa Clara Office Center', scc_path %></li>
       <li><%= link_to 'Great America Towers', gatowers_path %></li>
     </ul>
@@ -95,6 +94,7 @@
       <th>Size (SF)</th>
       <th>Deal Stage</th>
       <th>Comments/Notes</th>
+      <th>Documents</th>
     </tr>
   </thead>
   <tbody>
@@ -106,6 +106,10 @@
       <td>10,000SF</td>
       <td>Lease out for signature</td>
       <td>Executed copies expected next monday </td>
+      <td><a href="#">
+          <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
     </tr>
     <tr>
       <td>Nebula, Inc.</td>
@@ -113,7 +117,11 @@
       <td>#400</td>
       <td>6,500sf</td>
       <td>Proposals</td>
-      <td>Sent conter offer yesterday. Touch base early next week.</td>
+      <td>Sent offer yesterday. Touch base early next week.</td>
+      <td><a href="#">
+          <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
     </tr>
   </tbody>
 </table>

@@ -13,10 +13,9 @@
             <li><%= link_to "Search Database", for_lease_path %></li>
             <li><%= link_to "My Listings", my_listings_path %></li>
             <li><%= link_to "Current Deals", current_deals_path %></li>
-            <li><a href="#">Recently Closed</a></li>
             <li><a href="#">New Listings</a></li>
             <li><a href="#">New Comps</a></li>
-            <li><a href="#">Transcation History</a></li>
+            <li><%= link_to "Transaction History", closed_deals_path %></li>
             <li><a href="#">Accounts Receivable</a></li>
              <li><a href="#">News</a></li>
           </ul>
@@ -63,7 +62,7 @@
         <td><small><%= listing.asking_rate %></small></td>
         <td><small><%= listing.opex %></small></td>
      
-        <td><small><%= link_to 'Show', listing %></td>
+        <td><small><%= link_to 'Show', detail_path %></td>
         <% if listing.user == current_user %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>

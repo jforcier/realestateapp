@@ -13,10 +13,9 @@
             <li><%= link_to "Search Database", for_lease_path %></li>
             <li><%= link_to "My Listings", my_listings_path %></li>
             <li><%= link_to "Current Deals", current_deals_path %></li>
-            <li><a href="#">Recently Closed</a></li>
             <li><a href="#">New Listings</a></li>
             <li><a href="#">New Comps</a></li>
-            <li><a href="#">Transcation History</a></li>
+            <li><%= link_to "Transaction History", closed_deals_path %></li>
             <li><a href="#">Accounts Receivable</a></li>
              <li><a href="#">News</a></li>
           </ul>
@@ -61,6 +60,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Building Photo</th>
       <th>Building Address</th>
       <th>Suite #</th>
       <th>Size</th>
@@ -72,28 +72,43 @@
   <tbody>
 
     <tr>
+      <td><a href="#">
+            <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=03516c1a58484c9c8ad4ea33f98459c2&Extension=jpg&Width=0&Height=0" width="100" height="100"/> </td>
       <td>650 Castro Street, Mountain View</td>
       <td>#350</td>
       <td>10,000sf</td>
       <td>$5.00 NNN</td>
       <td>Liked Space, thought layout was funky. In Top 3</td>
-      <td> Insert Pics </td>
+      <td><a href="#">
+            <img src="http://www.brokersavant.com/wp-content/uploads/2013/06/Blog_DukeLong_flyer1.jpg" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
     </tr>
     <tr>
+      <td><a href="#">
+            <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=18bf7fc7dbfb4e3fa49882f0c7bf5da5&Extension=jpg&Width=0&Height=0" width="100" height="100"/></td>
       <td>444 Castro Street, Mountain View</td>
       <td>#600</td>
       <td>9,500sf</td>
       <td>$4.75 NNN</td>
       <td>Favorite Space. Good combination of open office and privates. Drafting Proposal</td>
-      <td> Insert Pics </td>
+      <td><a href="#">
+            <img src="http://www.brokersavant.com/wp-content/uploads/2013/06/Blog_DukeLong_flyer1.jpg" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
     </tr>
     <tr>
+      <td><a href="#">
+            <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=8d1a86a5cdf74a638c8ea32bf668fb90&Extension=jpg&Width=0&Height=0" width="100" height="100"/></td>
       <td>100 Mathilda Place, Sunnyvale</td>
       <td>#200</td>
       <td>11,500sf</td>
       <td>$4.25 NNN</td>
       <td>#2 space. Great layout, alternative location</td>
-      <td> Insert pics</td>
+      <td><a href="#">
+            <img src="http://www.brokersavant.com/wp-content/uploads/2013/06/Blog_DukeLong_flyer1.jpg" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
     </tr>
   </tbody>
 </table>
@@ -101,6 +116,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Building Photo </th>
       <th>Building Address</th>
       <th>Suite #</th>
       <th>Size</th>
@@ -113,12 +129,16 @@
     <p><h3><strong> Proposals/Offers Submitted</strong></h3></p>
 
     <tr>
+      <td><a href="#">
+            <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=18bf7fc7dbfb4e3fa49882f0c7bf5da5&Extension=jpg&Width=0&Height=0" width="100" height="100"/></td>
       <td>444 Castro Street, Mountain View</td>
       <td>#650</td>
       <td>9,500sf</td>
       <td>Sent Proposal</td>
       <td>Sent proposal today. Awaiting Feedback</td>
-      <td> Insert Docs </td>
+      <td><img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+            <a href="#">
+            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
     </tr>
   </tbody>
 </table>

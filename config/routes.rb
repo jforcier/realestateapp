@@ -40,6 +40,8 @@ Realestateapp::Application.routes.draw do
   get "dashboard" => "pages#dashboard"
   get "pipeline" => "pages#pipeline"
   get "detail" => "pages#detail"
+  get "manager_admin" => "pages#manager_admin"
+  get "detail_comp" => "pages#detail_comp"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

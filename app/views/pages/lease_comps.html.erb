@@ -12,11 +12,10 @@
             <li><%= link_to "Pipeline Overview", pipeline_path %></li>
             <li><%= link_to "Search Database", for_lease_path %></li>
             <li><%= link_to "My Listings", my_listings_path %></li>
-            <li><a href="#">Current Deals</a></li>
-            <li><a href="#">Recently Closed</a></li>
+            <li><%= link_to "Current Deals", current_deals_path %></li>
             <li><a href="#">New Listings</a></li>
             <li><a href="#">New Comps</a></li>
-            <li><a href="#">Transcation History</a></li>
+            <li><%= link_to "Transaction History", closed_deals_path %></li>
             <li><a href="#">Accounts Receivable</a></li>
              <li><a href="#">News</a></li>
           </ul>

@@ -1,3 +1,31 @@
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 sidebar">
+          <div class="row placeholders">
+          
+          <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
+            <h4>Jason Forcier</h4>
+              <span class="text-muted">Cornish & Carey</span>
+            </div>
+          <ul class="nav nav-sidebar">
+            <li><%= link_to "Performance Overview", dashboard_path %></li>
+            <li><%= link_to "Pipeline Overview", pipeline_path %></li>
+            <li><%= link_to "Search Database", for_lease_path %></li>
+            <li><%= link_to "My Listings", my_listings_path %></li>
+            <li><%= link_to "Current Deals", current_deals_path %></li>
+            <li><a href="#">Recently Closed</a></li>
+            <li><a href="#">New Listings</a></li>
+            <li><a href="#">New Comps</a></li>
+            <li><a href="#">Transcation History</a></li>
+            <li><a href="#">Accounts Receivable</a></li>
+             <li><a href="#">News</a></li>
+          </ul>
+          </div>
+
+          <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+
 <h1>Lease Listings </h1>
 
 <table class="table table-bordered">
@@ -31,7 +59,7 @@
         <td><small><%= listing.lease_type %></small></td>
         <td><small><%= listing.asking_rate %></small></td>
         <td><small><%= listing.opex %></small></td>
-        <td><%= link_to 'Show', listing %></td>
+        <td><%= link_to 'Show', detail_path %></td>
         <% if listing.user == current_user %>
         <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -46,3 +74,5 @@
 <% if user_signed_in? %>
 <%= link_to 'New Lease Listing', new_listing_path %>
 <% end %>
+</div>
+</div>

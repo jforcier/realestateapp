@@ -105,6 +105,11 @@ class PagesController < ApplicationController
   def detail
   end
 
+  def manager_admin
+  end
+
+  def detail_comp
+  end
 
   
 end
