@@ -42,6 +42,8 @@ Realestateapp::Application.routes.draw do
   get "detail" => "pages#detail"
   get "manager_admin" => "pages#manager_admin"
   get "detail_comp" => "pages#detail_comp"
+  get "new_listings" => "pages#new_listings"
+  get "new_comps" => "pages#new_comps"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

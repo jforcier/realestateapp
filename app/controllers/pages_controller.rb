@@ -111,5 +111,12 @@ class PagesController < ApplicationController
   def detail_comp
   end
 
+  def new_listings
+  end
+
+  def new_comps
+  end
+
+
   
 end
