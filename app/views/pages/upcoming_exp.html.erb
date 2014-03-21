@@ -16,7 +16,7 @@
             <li><%= link_to "New Listings", new_listings_path %></li>
             <li><%= link_to "New Comps", new_comps_path %></li>
             <li><%= link_to "Transaction History", closed_deals_path %></li>
-            <li><a href="#">Accounts Receivable</a></li>
+            <li><%= link_to "Accounts Receivable", accounts_receivable_path %></li>
              <li><a href="#">News</a></li>
           </ul>
           </div>
@@ -25,7 +25,7 @@
 <div class="row">
         <div class="col-md-10 col-md-offset-2">
           <p>
-          <h1 class="page-header">Expirations <!-- Split button -->
+          <h2 class="page-header">Expirations <!-- Split button -->
 <div class="btn-group">
   <button type="button" class="btn btn-u btn-u-green">Expiring</button>
   <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
@@ -36,7 +36,7 @@
     <li><%= link_to "New", closed_deals_path %></li>
     <li><%= link_to "All", closed_deals_path %></li>
   </ul>
-</div></h1>
+</div></h2>
         </p>
         </div>
       </div>
@@ -87,7 +87,7 @@
 </table>
 
 
-		<p><h3><strong>Procurring</strong></h3></p>
+		<p><h3><strong>Procuring</strong></h3></p>
 
 <table class="table table-hover">
 	<thead>

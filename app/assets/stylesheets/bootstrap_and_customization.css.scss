@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-
+@import url(http://fonts.googleapis.com/css?family=Oswald:300);
 
 $progress-bar-bg: #3498db;
 $progress-bar-warning-bg: #95a5a6;
@@ -22,7 +21,13 @@ $progress-bar-info-bg: #2c3e50;
 */
 
 /*Reset Styles
-------------------------------------*/
+------------------------------------*/ 
+
+.container-fill {
+   background-image: url("shutterstock_city.jpg");
+   background-size: 100%;
+}
+
 .top-buffer { margin-top:10px; }
 
 .panel-inverse  {
@@ -39,7 +44,10 @@ body {
    color: #333; 
    font-size: 13px;
    line-height: 1.6;
+   
+
 }
+
 
 p, a, li { 
    color: #555;
@@ -57,13 +65,13 @@ a:hover {
    text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
    margin-top: 5px; 
    text-shadow: none; 
    font-weight: normal !important; 
    font-family: 'Open Sans', sans-serif; 
 } 
-h1 i, h2 i, h3 i, h4 i, h5 i {
+ h2 i, h3 i, h4 i, h5 i {
    margin-right: 7px;
 }
 
