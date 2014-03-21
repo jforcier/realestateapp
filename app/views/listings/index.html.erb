@@ -8,19 +8,7 @@
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
-          <ul class="nav nav-sidebar">
-            <li><%= link_to "Performance Overview", dashboard_path %></li>
-            <li><%= link_to "Pipeline Overview", pipeline_path %></li>
-            <li><%= link_to "Search Database", for_lease_path %></li>
-            <li><%= link_to "My Listings", my_listings_path %></li>
-            <li><%= link_to "Current Deals", current_deals_path %></li>
-            <li><a href="#">Recently Closed</a></li>
-            <li><a href="#">New Listings</a></li>
-            <li><a href="#">New Comps</a></li>
-            <li><a href="#">Transcation History</a></li>
-            <li><a href="#">Accounts Receivable</a></li>
-             <li><a href="#">News</a></li>
-          </ul>
+          <%= render 'layouts/navbarside' %>
           </div>
 
           <div class="row">
