@@ -1,20 +1,25 @@
-
 <div class="container-fluid">
       <div class="row">
         <div class="col-md-2 sidebar">
           <div class="row placeholders">
-          
           <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
           <%= render 'layouts/navbarside' %>
-          </div>
+          </div><!--column-->
+        </div><!--row-->
+      </div><!--container-->
+<!-- Sidebar Nav -->
+<!-- Dashboard Header -->
+<div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <h2 class="page-header"><p><i class="fa fa-building-o fa-2x fa-fw"></i>Available - For Sale</p>
+        </div><!--column-->
+      </div><!--row-->
 
           <div class="row">
         <div class="col-md-10 col-md-offset-2">
-
-<h1>Sale Listings </h1>
 
 <table class="table table-bordered">
   <thead>
@@ -31,6 +36,9 @@
       <th>Parking Ratio</th>
       <th>Brokerage</th>
       <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -49,9 +57,16 @@
         <td><small><%= slisting.parking_string %></small></td>
         <td><small><%= slisting.brokerage %></small></td>
         <td><small><%= slisting.notes %></small></td>
-        <td><%= link_to 'Show', slisting %></td>
-        <td><%= link_to 'Edit', edit_slisting_path(slisting) %></td>
-        <td><%= link_to 'Destroy', slisting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to slisting do %>
+        <i class="fa fa-building-o fa-lg fa-fw"></i><small>View</small>
+        <% end %></td>
+        <td><%= link_to edit_slisting_path(slisting) do %>
+          <i class="fa fa-pencil-square-o fa-lg fa-fw"></i><small>Edit</small>
+          <% end %>
+        </td>
+        <td><%= link_to slisting, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-trash-o fa-lg fa-fw"></i><small>Delete</small>
+        <% end %></td>
       </tr>
     <% end %>
   </tbody>

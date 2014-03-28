@@ -1,18 +1,12 @@
-
 <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2 sidebar">
-          <div class="row placeholders">
-          
-          <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
-            <h4>Jason Forcier</h4>
-              <span class="text-muted">Cornish & Carey</span>
-            </div>
-          <%= render 'layouts/navbarside' %>
-          </div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+        <h2 class="page-header"><p><i class="fa fa-building-o fa-2x fa-fw"></i>New Sale Comp</p>
+     </div>
+   </div>
 
-          <div class="row">
-        <div class="col-md-10">
+<div class="row">
+  <div class="col-xs-6 col-md-3 col-md-offset-2">
 
 <%= form_for @scomp, html: { multipart: true } do |f| %>
   <% if @scomp.errors.any? %>
@@ -26,11 +20,6 @@
       </ul>
     </div>
   <% end %>
-
-<div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
 
   <div class="field">
     <%= f.label :city %><br>
@@ -57,6 +46,8 @@
     <%= f.label :closing_date %><br>
     <%= f.date_select :closing_date %>
   </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
   <div class="field">
     <%= f.label :buyer %><br>
     <%= f.text_field :buyer %>
@@ -81,6 +72,8 @@
     <%= f.label :floors %><br>
     <%= f.text_field :floors %>
   </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
   <div class="field">
     <%= f.label :buyer_broker %><br>
     <%= f.text_field :buyer_broker %>
@@ -101,7 +94,17 @@
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
   </div>
+  
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <div class ="row top-buffer">
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
+</div>
+</div>
+</div>

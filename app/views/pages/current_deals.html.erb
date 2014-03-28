@@ -2,60 +2,109 @@
       <div class="row">
         <div class="col-md-2 sidebar">
           <div class="row placeholders">
-          
           <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
           <%= render 'layouts/navbarside' %>
-          </div>
+          </div><!--column-->
+        </div><!--row-->
+      </div><!--container-->
 <!-- Sidebar Nav -->
 <!-- Dashboard Header -->
 <div class="row">
         <div class="col-md-10 col-md-offset-2">
-          <p>
-          <h2 class="page-header">Current Deals <!-- Split button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-u btn-u-green">Tenant Rep</button>
-  <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><%= link_to "Listings", landlord_rep_path %></li>
-  </ul>
-</div></h2>
-        </p>
+          <h2 class="page-header"><p><i class="fa fa-folder-open fa-2x"></i> Current Deals - Procuring</p>
+        <div class="btn-group">
+        <button type="button" class="btn btn-u btn-u-green">Procuring</button>
+        <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><%= link_to "Listings", landlord_rep_path %></li>
+        </ul>
+      </div></h2>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+<ul class="nav nav-tabs">
+      <li class="active"><%= link_to 'Bitcasa', bitcasa_path %></li>
+      <li><%= link_to 'GameClosure', gameclosure_path %></li>
+      <li><%= link_to 'StartX', startx_path %></li>
+      <li><button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Client</button></li>
+    </ul>
+    </div>
+  </div>
+<div class="row top-buffer">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Client Overview</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+           <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-camera fa-fw"></i>Create Report</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+        <div class="col-md-12">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Partner (If Any)</th>
+                <th>Requirement</th>
+                <th>Areas of Interest</th>
+                <th>Timing</th>
+                <th>Contact(s)</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sean Whitney & Jeff Arrillaga</td>
+                <td>10,000 - 20,000sf. Creative office. Must be near Caltrain</td>
+                <td>Palo Alto, Mountain View, Sunnyvale</td>
+                <td>Q'4 - 2014</td>
+                <td>Eric Dimano</td>
+                <td><i class="fa fa-pencil-square-o fa-lg"></i></td> 
+              </tr>
+            </tbody>
+          </table>
+          </div><!--column-->
+          </div><!--row-->
+        </div><!--panelbody-->
+      </div><!--paneldefault-->
+    </div><!--column-->
+  </div><!--row-->
 
 <div class="row">
   <div class="col-md-10 col-md-offset-2">
-
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Tenant Rep Deals In Progress</h3>
-      </div>
+        <h3 class="panel-title">Buildings Toured</h3>
+      </div><!--panelheading-->
       <div class="panel-body">
-<ul class="nav nav-tabs">
-      <p><strong>Tenant Name (Click on Tenant to Open)</strong></p>
-      <li class="active"><%= link_to 'Bitcasa', "#" %></li>
-      <li><%= link_to 'GameClosure', gameclosure_path %></li>
-      <li><%= link_to 'StartX', "#" %></li>
-    </ul>
-
-    <p><h3><strong> Buildings Toured</strong></h3></p>
-
-<table class="table table-hover">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Building</button>
+        </div>
+      </div>
+      <div class="row top-buffer">
+        <div class="col-md-12">
+    <table class="table table-hover">
   <thead>
     <tr>
       <th>Building Photo</th>
-      <th>Building Address</th>
-      <th>Suite #</th>
+      <th>Address</th>
+      <th>Suite</th>
       <th>Size</th>
       <th>Rate</th>
       <th>Comments/Notes</th>
       <th>Brochures/Floorplans</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -69,9 +118,10 @@
       <td>$5.00 NNN</td>
       <td>Liked Space, thought layout was funky. In Top 3</td>
       <td><a href="#">
-            <img src="http://thekurtzteam.com/wp-content/uploads/2012/05/StirlingCenterBrochure-11.jpg" width="50" height="50"/>
+            <img src="http://s.lnimg.com/photo/poster/1a3560c8bcaa45be9dd35d76f85d97fb.jpg" width="50" height="50"/>
             <a href="#">
             <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
+      <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
     </tr>
     <tr>
       <td><a href="#">
@@ -82,9 +132,10 @@
       <td>$4.75 NNN</td>
       <td>Favorite Space. Good combination of open office and privates. Drafting Proposal</td>
       <td><a href="#">
-            <img src="http://www.brokersavant.com/wp-content/uploads/2013/06/Blog_DukeLong_flyer1.jpg" width="50" height="50"/>
+            <img src="http://s.lnimg.com/photo/poster/1a3560c8bcaa45be9dd35d76f85d97fb.jpg" width="50" height="50"/>
             <a href="#">
             <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
+      <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
     </tr>
     <tr>
       <td><a href="#">
@@ -95,45 +146,69 @@
       <td>$4.25 NNN</td>
       <td>#2 space. Great layout, alternative location</td>
       <td><a href="#">
-            <img src="http://www.brokersavant.com/wp-content/uploads/2013/06/Blog_DukeLong_flyer1.jpg" width="50" height="50"/>
+            <img src="http://s.lnimg.com/photo/poster/1a3560c8bcaa45be9dd35d76f85d97fb.jpg" width="50" height="50"/>
             <a href="#">
             <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
+      <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
     </tr>
   </tbody>
 </table>
+</div><!--column-->
+</div><!--row-->
+</div><!--panelbody-->
+</div><!--paneldefault-->
+</div><!--column-->
+</div><!--row-->
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Building Photo </th>
-      <th>Building Address</th>
-      <th>Suite #</th>
-      <th>Size</th>
-      <th>Deal Stage</th>
-      <th>Comments/Notes</th>
-      <th>Documents</th>
-    </tr>
-  </thead>
-  <tbody>
-    <p><h3><strong> Proposals/Offers Submitted</strong></h3></p>
-
-    <tr>
-      <td><a href="#">
-            <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=18bf7fc7dbfb4e3fa49882f0c7bf5da5&Extension=jpg&Width=0&Height=0" width="100" height="100"/></td>
-      <td>444 Castro Street, Mountain View</td>
-      <td>#650</td>
-      <td>9,500sf</td>
-      <td>Sent Proposal</td>
-      <td>Sent proposal today. Awaiting Feedback</td>
-      <td><img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
-            <a href="#">
-            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Proposals/Offers</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Proposal</button>
+        </div>
       </div>
-    </div>
+      <div class="row top-buffer">
+        <div class="col-md-12">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Building Photo </th>
+                <th>Address</th>
+                <th>Suite </th>
+                <th>Size</th>
+                <th>Deal Stage</th>
+                <th>Comments/Notes</th>
+                <th>Documents</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">
+                      <img src="http://s.lnimg.com/xnet/mainsite/HttpHandlers/attachment/ServeAttachment.ashx?FileGuid=18bf7fc7dbfb4e3fa49882f0c7bf5da5&Extension=jpg&Width=0&Height=0" width="100" height="100"/></td>
+                <td>444 Castro Street, Mountain View</td>
+                <td>#650</td>
+                <td>9,500sf</td>
+                <td>Sent Proposal</td>
+                <td>Sent proposal today. Awaiting Feedback</td>
+                <td><img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+                      <a href="#"></td>
+                       <td> <i class="fa fa-pencil-square-o fa-lg"></i></td>
+              </tr>
+            </tbody>
+          </table>
+</div><!--column-->
+</div><!--row-->
+</div> <!--panelbody-->
+</div> <!--paneldefault-->
+</div><!--column-->
+</div><!--row-->
 
-  </div> <!--column-->
-</div> <!--row-->
+
+ 
+   

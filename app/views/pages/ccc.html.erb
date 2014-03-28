@@ -2,165 +2,213 @@
       <div class="row">
         <div class="col-md-2 sidebar">
           <div class="row placeholders">
-          
           <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
           <%= render 'layouts/navbarside' %>
-          </div>
+          </div><!--column-->
+        </div><!--row-->
+      </div><!--container-->
 <!-- Sidebar Nav -->
 <!-- Dashboard Header -->
 <div class="row">
         <div class="col-md-10 col-md-offset-2">
-          <p>
-          <h1 class="page-header">Current Deals <!-- Split button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-u btn-u-green">Listings</button>
-  <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><%= link_to "Tenant Rep", current_deals_path %></li>
-  </ul>
-</div></h1>
-        </p>
+          <h2 class="page-header"><p><i class="fa fa-folder-open fa-2x"></i> Current Deals - Listing</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-u btn-u-green">Listings</button>
+            <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to "Procuring", current_deals_path %></li>
+            </ul>
+        </div></h2>
         </div>
       </div>
+ <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <ul class="nav nav-tabs">
+          <li class="active"><%= link_to 'Cupertino City Center', ccc_path %></li>
+          <li><%= link_to 'Santa Clara Office Center', scc_path %></li>
+          <li><%= link_to 'Great America Towers', gatowers_path %></li>
+          <li><button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Listing</button></li>
+          </ul>
+        </div><!--column-->
+  </div><!--row-->
+
+<div class="row top-buffer">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Overview</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-camera fa-fw"></i>Create Report</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
+            <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Partner (If Any)</th>
+              <th>Landlord</th>
+              <th>Contact</th>
+              <th>Building Size</th>
+              <th>Vacancy</th>
+              <th>Asking Rate</th>
+              <th>Opex</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Phil Mahoney</td>
+              <td>Prometheus</td>
+              <td>John Moe</td>
+              <td>150,000sf</td>
+              <td>14%</td>
+              <td>$4.00NNN</td>
+              <td>$1.25</td>
+              <td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+              
+            </tr>
+          </tbody>
+        </table>
+        </div><!--column-->
+          </div><!--row-->
+        </div><!--panelbody-->
+      </div><!--paneldefault-->
+    </div><!--column-->
+  </div><!--row-->
 
 <div class="row">
   <div class="col-md-10 col-md-offset-2">
-
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Listing Deals In Progress</h3>
-      </div>
+        <h3 class="panel-title">Pending Deals</h3>
+      </div><!--panelheading-->
       <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Deal</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Tenant</th>
+                  <th>Broker/Agent</th>
+                  <th>Suite</th>
+                  <th>Size (SF)</th>
+                  <th>Deal Stage</th>
+                  <th>Comments</th>
+                  <th>Documents</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
 
-    <ul class="nav nav-tabs">
-      <p><strong>Property Name (Click on Address to Open)</strong></p>
-      <li class="active"><%= link_to 'Cupertino City Center', ccc_path %></li>
-      <li><%= link_to 'Santa Clara Office Center', scc_path %></li>
-      <li><%= link_to 'Great America Towers', gatowers_path %></li>
-    </ul>
-    <table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Partner (If Any)</th>
-      <th>Landlord</th>
-      <th>Contact</th>
-      <th>Building Size</th>
-      <th>Vacancy</th>
-      <th>Asking Rate</th>
-      <th>Opex</th>
-    </tr>
-  </thead>
-  <tbody>
-    <p><h3><strong>Overview</strong></h3></p>
+                <tr>
+                  <td>Micro Electronics, Inc</td>
+                  <td>Sean Whitney - Cornish & Carey</td>
+                  <td># 350</td>
+                  <td>10,000SF</td>
+                  <td>Lease out for signature</td>
+                  <td>Executed copies expected next monday </td>
+                  <td><a href="#">
+                      <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/></td>
+                      <td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+                </tr>
+                <tr>
+                  <td>Nebula, Inc.</td>
+                  <td>Ben Stern - Cornish & Carey</td>
+                  <td>#400</td>
+                  <td>6,500sf</td>
+                  <td>Proposals</td>
+                  <td>Sent offer yesterday. Touch base early next week.</td>
+                  <td><a href="#">
+                      <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/></td>
+                      <td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            </div><!--column-->
+          </div><!--row-->
+        </div><!--panelbody-->
+      </div><!--paneldefault-->
+    </div><!--column-->
+  </div><!--row-->
 
-    <tr>
-      <td>Phil Mahoney</td>
-      <td>Prometheus</td>
-      <td>John Moe</td>
-      <td>150,000sf</td>
-      <td>14%</td>
-      <td>$4.00NNN</td>
-      <td>$1.25</td>
-      
-    </tr>
-  </tbody>
-</table>
-
-    <p><h3><strong>Pending Deals</strong></h3></p>
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Tenant</th>
-      <th>Broker/Agent</th>
-      <th>Suite #</th>
-      <th>Size (SF)</th>
-      <th>Deal Stage</th>
-      <th>Comments/Notes</th>
-      <th>Documents</th>
-    </tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <td>Micro Electronics, Inc</td>
-      <td>Sean Whitney</td>
-      <td># 350</td>
-      <td>10,000SF</td>
-      <td>Lease out for signature</td>
-      <td>Executed copies expected next monday </td>
-      <td><a href="#">
-          <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
-            <a href="#">
-            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
-    </tr>
-    <tr>
-      <td>Nebula, Inc.</td>
-      <td>Ben Stern</td>
-      <td>#400</td>
-      <td>6,500sf</td>
-      <td>Proposals</td>
-      <td>Sent offer yesterday. Touch base early next week.</td>
-      <td><a href="#">
-          <img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
-            <a href="#">
-            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Tenant</th>
-      <th>Broker/Agent</th>
-      <th>Requirement</th>
-      <th>Timing</th>
-      <th>Tour (y/n)</th>
-      <th>Tour Date</th>
-      <th>Comments/Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <p><h3><strong> Touring Activity </strong></h3></p>
-
-    <tr>
-      <td>N/A</td>
-      <td>Jason Forcier - Cornish & Carey </td>
-      <td>4,000-6,000sf, 3 Conf Rooms and 1 Private</td>
-      <td>Q'2 - 2014</td>
-      <td>Yes</td>
-      <td> 1/15/2014 </td>
-      <td>Preliminary Interest</td>
-    </tr>
-    <tr>
-      <td>ABC, Inc.</td>
-      <td>Mike Connor - CTBT </td>
-      <td>10,000-15,000sf, Law firm buildout</td>
-      <td>Q'4 - 2014</td>
-      <td>Yes</td>
-      <td> 1/24/2014 </td>
-      <td>Liked suite 400. Expecting proposal from Broker soon.</td>
-    </tr>
-    <tr>
-      <td>XYZ, Inc.</td>
-      <td>Rich Branning - JLL </td>
-      <td>20,000-35,000sf, Tech office layout. Large server room needed</td>
-      <td>Q'2 - 2015</td>
-      <td>No</td>
-      <td> N/A </td>
-      <td>Setting up tour for next week</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-    </div>
-
-  </div> <!--column-->
-</div> <!--row-->
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Touring Activity</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Prospect</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Tenant</th>
+                  <th>Broker/Agent</th>
+                  <th>Requirement</th>
+                  <th>Timing</th>
+                  <th>Tour (y/n)</th>
+                  <th>Tour Date</th>
+                  <th>Comments/Notes</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>N/A</td>
+                  <td>Jason Forcier - Cornish & Carey </td>
+                  <td>4,000-6,000sf, 3 Conf Rooms and 1 Private</td>
+                  <td>Q'2 - 2014</td>
+                  <td>Yes</td>
+                  <td> 1/15/2014 </td>
+                  <td>Preliminary Interest</td>
+                  <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
+                </tr>
+                <tr>
+                  <td>ABC, Inc.</td>
+                  <td>Mike Connor - CTBT </td>
+                  <td>10,000-15,000sf, Law firm buildout</td>
+                  <td>Q'4 - 2014</td>
+                  <td>Yes</td>
+                  <td> 1/24/2014 </td>
+                  <td>Liked suite 400. Expecting proposal from Broker soon.</td>
+                  <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
+                </tr>
+                <tr>
+                  <td>XYZ, Inc.</td>
+                  <td>Rich Branning - JLL </td>
+                  <td>20,000-35,000sf, Tech office layout. Large server room needed</td>
+                  <td>Q'2 - 2015</td>
+                  <td>No</td>
+                  <td> N/A </td>
+                  <td>Setting up tour for next week</td>
+                  <td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            </div><!--column-->
+          </div><!--row-->
+        </div><!--panelbody-->
+      </div><!--paneldefault-->
+    </div><!--column-->
+  </div><!--row-->

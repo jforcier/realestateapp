@@ -1,11 +1,29 @@
 <ul class="nav nav-stacked">
-            <li><p><i class="fa fa-search fa-lg fa-fw"></i><%= link_to "Search Database", for_lease_path %></p></li>
-            <li><p><i class="fa fa-tachometer fa-lg fa-fw"></i> <%= link_to "Dashboard", dashboard_path %> </p></li>
-            <li><p><i class="fa fa-bullseye fa-lg fa-fw"></i><%= link_to "Pipeline", pipeline_path %></p></li>
-            <li><p><i class="fa fa-building-o fa-lg fa-fw"></i><%= link_to "My Listings", my_listings_path %></p></li>
-            <li><p><i class="fa fa-folder-open fa-lg fa-fw"></i><%= link_to "Current Deals", current_deals_path %></p></li>
-            <li><p><i class="fa fa-star fa-lg fa-fw"></i><%= link_to "New Listings", new_listings_path %></p></li>
-            <li><p><i class="fa fa-star fa-lg fa-fw"></i><%= link_to "New Comps", new_comps_path %></p></li>
-            <li><p><i class="fa fa-archive fa-lg fa-fw"></i><%= link_to "Transaction History", closed_deals_path %></p></li>
-            <li><p><i class="fa fa-usd fa-lg fa-fw"></i><%= link_to "Accounts Receivable", accounts_receivable_path %></p></li>
+            <li><%= link_to for_lease_path do %>
+                  <i class="fa fa-search fa-lg fa-fw"></i> Search Database
+                  <% end %></li>
+            <li><%= link_to dashboard_path do %>
+                  <i class="fa fa-tachometer fa-lg fa-fw"></i>Dashboard
+                  <% end %></li>
+            <li><%= link_to pipeline_path do %>
+            <i class="fa fa-bullseye fa-lg fa-fw"></i>Pipeline
+                  <% end %></li>
+            <li><%= link_to my_listings_path do %>
+                  <i class="fa fa-building-o fa-lg fa-fw"></i>My Listings
+                  <% end %></li>
+            <li></i><%= link_to current_deals_path do %>
+            <i class="fa fa-folder-open fa-lg fa-fw"></i>Current Deals
+                  <% end %> </li>
+            <li><%= link_to new_listings_path do %>
+            <i class="fa fa-flag fa-lg fa-fw"></i> New Listings
+                  <% end %></li>
+            <li><%= link_to new_comps_path do %>
+            <i class="fa fa-flag-checkered fa-lg fa-fw"></i> New Comps
+                  <% end %></li>
+            <li><%= link_to closed_deals_path do %>
+                  <i class="fa fa-archive fa-lg fa-fw"></i>Transaction History
+                  <% end %></li>
+            <li><%= link_to accounts_receivable_path do %>
+                  <i class="fa fa-usd fa-lg fa-fw"></i>Accounts Due
+                  <% end %></li>
           </ul>

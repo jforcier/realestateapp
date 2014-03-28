@@ -1,127 +1,169 @@
-
-
-		<div class="container-fluid">
+<div class="container-fluid">
       <div class="row">
         <div class="col-md-2 sidebar">
           <div class="row placeholders">
-          
           <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
           <%= render 'layouts/navbarside' %>
-          </div>
+          </div><!--column-->
+        </div><!--row-->
+      </div><!--container-->
 <!-- Sidebar Nav -->
 <!-- Dashboard Header -->
 <div class="row">
         <div class="col-md-10 col-md-offset-2">
-          <p>
-          <h1 class="page-header">Current Deals <!-- Split button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-u btn-u-green">Listings</button>
-  <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><%= link_to "Tenant Rep", current_deals_path %></li>
-  </ul>
-</div></h1>
-        </p>
+          <h2 class="page-header"><p><i class="fa fa-folder-open fa-2x"></i> Current Deals - Listing</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-u btn-u-green">Listings</button>
+            <button type="button" class="btn btn-u btn-u-green dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to "Procuring", current_deals_path %></li>
+            </ul>
+        </div></h2>
         </div>
       </div>
-
-<div class="row">
-  <div class="col-md-10 col-md-offset-2">
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Listing Deals In Progress</h3>
-      </div>
-      <div class="panel-body">
-
-    <ul class="nav nav-tabs">
-      <p><strong>Property Name (Click on Address to Open)</strong></p>
+ <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+          <ul class="nav nav-tabs">
       <li><%= link_to 'Cupertino City Center', ccc_path %></li>
       <li class="active"><%= link_to 'Santa Clara Office Center', scc_path %></li>
       <li><%= link_to 'Great America Towers', gatowers_path %></li>
-    </ul>
-		<table class="table table-hover">
-	<thead>
-		<tr>
-			<th>Partner (If Any)</th>
-			<th>Landlord</th>
-			<th>Contact</th>
-			<th>Building Size</th>
-			<th>Vacancy</th>
-			<th>Asking Rate</th>
-			<th>Opex</th>
-		</tr>
-	</thead>
-	<tbody>
-		<p><h3><strong>Overview</strong>
-			<button type="button" class="btn btn-primary btn-sm">Create Report</button>
-		</h3></p>
+      <li><button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Listing</button>
+    </ul></li>
+        </div><!--column-->
+  		</div><!--row-->
 
-		<tr>
-			<td>Todd Shaffer</td>
-			<td>Prometheus</td>
-			<td>John Doe</td>
-			<td>100,000sf</td>
-			<td>20%</td>
-			<td>$5.50NNN</td>
-			<td>$1.00</td>
-			
-		</tr>
-	</tbody>
-</table>
 
-		<p><h3><strong>Pending Deals</strong></h3></p>
+<div class="row top-buffer">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Overview</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-camera fa-fw"></i>Create Report</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Partner (If Any)</th>
+							<th>Landlord</th>
+							<th>Contact</th>
+							<th>Building Size</th>
+							<th>Vacancy</th>
+							<th>Asking Rate</th>
+							<th>Opex</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>Jeff Arrillaga</td>
+						<td>Bixby Land</td>
+						<td>Jim Brown</td>
+						<td>300,000sf</td>
+						<td>10%</td>
+						<td>$2.50NNN</td>
+						<td>$1.10</td>
+						<td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+					</tr>
+					</tbody>
+				</table>
+				</div><!--column-->
+			</div><!--row-->
+			</div><!--panelbody-->
+		</div><!--paneldefault-->
+	</div><!--column-->
+</div><!--row-->
 
-<table class="table table-hover">
-	<thead>
-		<tr>
-			<th>Tenant</th>
-			<th>Broker/Agent</th>
-			<th>Suite #</th>
-			<th>Size (SF)</th>
-			<th>Deal Stage</th>
-			<th>Comments/Notes</th>
-			<th>Documents</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Active Deals</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Deal</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Tenant</th>
+							<th>Broker/Agent</th>
+							<th>Suite #</th>
+							<th>Size (SF)</th>
+							<th>Deal Stage</th>
+							<th>Comments/Notes</th>
+							<th>Documents</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
 
-		<tr>
-			<td>Mozilla, Inc</td>
-			<td>Jeff Arrillaga</td>
-			<td># 250</td>
-			<td>30,000SF</td>
-			<td>Second round of proposals</td>
-			<td>Reviewing counter proposal </td>
-			<td><a href="#">
-					<img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
-            <a href="#">
-            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
-            <td><button type="button" class="btn btn-warning btn-xs">Update</button></td>
-		</tr>
-		<tr>
-			<td>Pure Storage, Inc.</td>
-			<td>Jeff Rogers</td>
-			<td>#400</td>
-			<td>9,000sf</td>
-			<td>Lease negotiations</td>
-			<td>Lease drafted. Sent for review</td>
-			<td><a href="#">
-					<img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
-            <a href="#">
-            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
-            <td><button type="button" class="btn btn-warning btn-xs">Update</button></td>
-		</tr>
-	</tbody>
-</table>
+						<tr>
+							<td>Mozilla, Inc</td>
+							<td>Jeff Arrillaga</td>
+							<td># 250</td>
+							<td>30,000SF</td>
+							<td>Second round of proposals</td>
+							<td>Reviewing counter proposal </td>
+							<td><a href="#">
+									<img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+				            <a href="#">
+				            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
+							<td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+						</tr>
+						<tr>
+							<td>Pure Storage, Inc.</td>
+							<td>Jeff Rogers</td>
+							<td>#400</td>
+							<td>9,000sf</td>
+							<td>Lease negotiations</td>
+							<td>Lease drafted. Sent for review</td>
+							<td><a href="#">
+									<img src="http://img.docstoccdn.com/thumb/orig/123748539.png" width="50" height="50"/>
+				            <a href="#">
+				            <img src="http://www.execsuitescheyenne.com/public/Floorplan_mezz.jpg" width="50" height="50"/></td></td>
+							<td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+						</tr>
+					</tbody>
+				</table>
+				</div><!--column-->
+			</div><!--row-->
+			</div><!--panelbody-->
+		</div><!--paneldefault-->
+	</div><!--column-->
+</div><!--row-->
 
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Touring Activity</h3>
+      </div><!--panelheading-->
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i>Add Prospect</button>
+        </div>
+      </div>
+        <div class="row top-buffer">
+          <div class="col-md-12">
 <table class="table table-hover">
 	<thead>
 		<tr>
@@ -146,7 +188,7 @@
 			<td>Yes</td>
 			<td> 1/15/2014 </td>
 			<td>Preliminary Interest</td>
-			<td><button type="button" class="btn btn-warning btn-xs">Update</button></td>
+			<td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
 		</tr>
 		<tr>
 			<td>ABC, Inc.</td>
@@ -156,7 +198,7 @@
 			<td>Yes</td>
 			<td> 1/24/2014 </td>
 			<td>Liked suite 400. Expecting proposal from Broker soon.</td>
-			<td><button type="button" class="btn btn-warning btn-xs">Update</button></td>
+			<td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
 		</tr>
 		<tr>
 			<td>XYZ, Inc.</td>
@@ -166,7 +208,13 @@
 			<td>No</td>
 			<td> N/A </td>
 			<td>Setting up tour for next week</td>
-			<td><button type="button" class="btn btn-warning btn-xs">Update</button></td>
+			<td> <i class="fa fa-pencil-square-o fa-lg"></i><i class="fa fa-trash-o fa-lg"></i></td>
 		</tr>
 	</tbody>
 </table>
+		</div><!--column-->
+			</div><!--row-->
+			</div><!--panelbody-->
+		</div><!--paneldefault-->
+	</div><!--column-->
+</div><!--row-->

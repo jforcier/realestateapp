@@ -12,13 +12,13 @@
 <!-- Sidebar Nav -->
 <!-- Dashboard Header -->
 <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-          <h1 class="page-header">Search Database</h1>
+        <div class="col-xs-12 col-md-10 col-md-offset-2">
+          <h2 class="page-header"><p><i class="fa fa-search fa-2x"></i> Lease Comps</p></h2>
         </div>
       </div>
 <!--navtab-->
 <div class="row">
-  <div class="col-md-10 col-md-offset-2">
+  <div class="col-xs-12 col-md-10 col-md-offset-2">
     <ul class="nav nav-tabs">
     <li><%= link_to "For Lease", "for_lease"%></li>
     <li class="active" ><%= link_to "Lease Comps", "lease_comps"%></li>
@@ -30,125 +30,149 @@
 </div> <!--row-->
 
 <div class="row top-buffer">
-   <div class="col-md-10 col-md-offset-2">
+   <div class="col-xs-12 col-md-10 col-md-offset-2">
 
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Search Lease Comps</h3>
       </div>
     <div class="panel-body">
-<%= search_form_for @search do |f| %>
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+
+        <%= search_form_for @search do |f| %>
 
 <!-- City Search -->
-<div class="row top-buffer">
+<div class="row">
   <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
     <%= f.label :city_cont, "City" %>
-</div>
-  <div class="col-md-3">
+</div><!--column-->
+  <div class="col-xs-6 col-md-10">
     <%= f.text_field :city_cont %>
-</div>
-  </div>
-</div>
+  </div><!--column-->
+  </div><!--fg-->
+</div><!--row-->
 
  <!-- Building Type -->
  <div class="row top-buffer">
   <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
     <%= f.label :address_cont, "Address" %>
-</div>
-<div class="col-md-4">
+</div><!--column-->
+<div class="col-xs-6 col-md-10">
     <%= f.text_field :address_cont %>
-</div>
-  </div>
-</div>
+</div><!--column-->
+  </div><!--fg-->
+</div><!--row-->
 
   <!-- Tenant -->
   <div class="row top-buffer">
   <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
     <%= f.label :tenant_cont, "Tenant" %>
-</div>
-<div class="col-md-4">
+</div><!--column-->
+<div class="col-xs-6 col-md-10">
     <%= f.text_field :tenant_cont %>
-</div>
-</div>
-</div>
+</div><!--column-->
+ </div><!--fg-->
+</div><!--row-->
 
   <!-- Landlord -->
   <div class="row top-buffer">
   <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
     <%= f.label :landlord_cont, "Landlord" %>
-</div>
-<div class="col-md-4">
+</div><!--column-->
+<div class="col-xs-6 col-md-10">
     <%= f.text_field :landlord_cont %>
-</div>
-</div>
-</div>
+</div><!--column-->
+</div><!--fg-->
+</div><!--row-->
+
 
 <!-- Size (sf) -->
 <div class="row top-buffer">
   <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
     <%= f.label :size_gteq, "Minimum Size (sf)" %>
-</div>
-<div class="col-sm-3">
+</div><!--column-->
+<div class="col-xs-6 col-md-2">
     <%= f.text_field :size_gteq %>
-  </div>
+</div><!--column-->
+  <div class="col-xs-6 col-md-2">
     <%= f.label :size_lteq, "Maximum Size (sf)" %>
+    </div><!--column-->
+    <div class="col-xs-6 col-md-2">
     <%= f.text_field :size_lteq %>
-  </div>
-</div>
+ </div><!--column-->
+</div><!--fg-->
+</div><!--row-->
 
 <!-- Effective Rate -->
   <div class="row top-buffer">
    <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
       <%= f.label :effective_rate_gteq, "Minimum Rate ($)" %>
-  </div>
-  <div class="col-sm-3">
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.text_field :effective_rate_gteq %>
-  </div>
-
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.label :effective_rate_lteq, "Maximum Rate ($)" %>
+    </div><!--column-->
+   <div class="col-xs-6 col-md-2">   
       <%= f.text_field :effective_rate_lteq %>
-    </div>
-</div>
+   </div><!--column-->
+</div><!--fg-->
+</div><!--row-->
 
 <!-- Lease Start -->
   <div class="row top-buffer">
    <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
       <%= f.label :lease_start_gteq, "Earliest Start" %>
-  </div>
-  <div class="col-sm-3">
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.date_field :lease_start_gteq %>
-  </div>
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.label :lease_start_lteq, "Latest Start" %>
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">    
       <%= f.date_field :lease_start_lteq %>
-    </div>
-</div>
+   </div><!--column-->
+</div><!--fg-->
+</div><!--row-->
 
 <!-- Lease Expiration -->
   <div class="row top-buffer">
    <div class="field-group">
-    <div class="col-sm-1">
+    <div class="col-xs-6 col-md-2">
       <%= f.label :lease_expiration_gteq, "Earliest Expiration" %>
-  </div>
-  <div class="col-sm-3">
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.date_field :lease_expiration_gteq %>
-  </div>
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.label :lease_expiration_lteq, "Latest Expiration" %>
+  </div><!--column-->
+  <div class="col-xs-6 col-md-2">
       <%= f.date_field :lease_expiration_lteq %>
-    </div>
-</div>
+  </div><!--column-->
+</div><!--fg-->
+</div><!--row-->
 
 <!-- Search Button -->
+  <div class="row">
+  <div class="col-xs-6 col-md-6">
   <div class="actions">
     <%= f.submit "Search" %></div>
-<% end %>
+  <% end %>
+  </div><!--column-->
+  </div><!--row-->
 
-</div>
-</div>
-</div>
+  </div><!--panelbdy-->
+  </div><!--paneldefault-->
+  </div><!--column-->
+  </div><!--row-->

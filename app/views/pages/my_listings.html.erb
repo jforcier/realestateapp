@@ -2,25 +2,27 @@
       <div class="row">
         <div class="col-md-2 sidebar">
           <div class="row placeholders">
-          
           <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
             <h4>Jason Forcier</h4>
               <span class="text-muted">Cornish & Carey</span>
             </div>
           <%= render 'layouts/navbarside' %>
-          </div>
+          </div><!--column-->
+        </div><!--row-->
+      </div><!--container-->
 <!-- Sidebar Nav -->
 <!-- Dashboard Header -->
 <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-          <h2 class="page-header">My Listings</h2>
-        </div>
+        <div class="col-xs-12 col-md-10 col-md-offset-2">
+          <h2 class="page-header"><p><i class="fa fa-building-o fa-2x fa-fw"></i>My Listings</p>
+        </div><!--column-->
+      </div><!--row-->
 <div class="row">
-<div class="col-md-10 col-md-offset-2">
+<div class="col-xs-12 col-md-10 col-md-offset-2">
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Image</th>
+      <th>Building Photo</th>
       <th>Agent</th>
       <th>City</th>
       <th>Address</th>
@@ -31,6 +33,9 @@
       <th>Lease Type</th>
       <th>Asking Rate</th>
       <th>Opex</th>
+      <th></th>
+      <th></th>
+      <th></th>
      
       
     </tr>
@@ -51,11 +56,20 @@
         <td><small><%= listing.asking_rate %></small></td>
         <td><small><%= listing.opex %></small></td>
      
-        <td><small><%= link_to 'Show', detail_path %></td>
-        <% if listing.user == current_user %>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to detail_path do %>
+        <i class="fa fa-building-o fa-lg fa-fw"></i><small>View</small>
         <% end %>
+      </td>
+        <% if listing.user == current_user %>
+        <td><%= link_to edit_listing_path(listing) do %>
+          <i class="fa fa-pencil-square-o fa-lg fa-fw"></i><small>Edit</small>
+          <% end %>
+        </td>
+        <td><%= link_to listing, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="fa fa-trash-o fa-lg fa-fw"></i><small>Delete</small>
+        <% end %>
+        <% end %>
+      </td>
       </tr>
 
     <% end %>
@@ -64,6 +78,6 @@
 
 <br>
 <% if user_signed_in? %>
-<%= link_to 'New Lease Listing', new_listing_path %>
+<button type="button" class="btn btn-u btn-u-green"><i class="fa fa-plus-square fa-fw"></i><%= link_to 'New Lease Listing', new_listing_path %></button>
 <% end %>
 </div>

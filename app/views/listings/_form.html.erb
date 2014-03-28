@@ -1,19 +1,12 @@
-
 <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2 sidebar">
-          <div class="row placeholders">
-          
-          <img src="http://www.ccareynkf.com/FileStore/IMG/Agt_59B4875E12004ED397A4A176FE35AD46.jpg" width="130" height="130" class="img-circle"/>
-            <h4>Jason Forcier</h4>
-              <span class="text-muted">Cornish & Carey</span>
-            </div>
-          <%= render 'layouts/navbarside' %>
-          </div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+        <h2 class="page-header"><p><i class="fa fa-building-o fa-2x fa-fw"></i>New Lease Listing</p>
+     </div>
+   </div>
 
-          <div class="row">
-        <div class="col-md-10">
-
+<div class="row">
+  <div class="col-xs-6 col-md-3 col-md-offset-2">
 <%= form_for @listing, html: { multipart: true } do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation">
@@ -26,11 +19,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
 
   <div class="field">
     <%= f.label :city %><br>
@@ -52,6 +40,8 @@
     <%= f.label :building_type %><br>
     <%= f.text_field :building_type %>
   </div>
+</div>
+  <div class="col-xs-6 col-md-3">
   <div class="field">
     <%= f.label :building_class %><br>
     <%= f.text_field :building_class %>
@@ -72,11 +62,23 @@
     <%= f.label :brokerage %><br>
     <%= f.text_field :brokerage %>
   </div>
+</div>
+<div class="col-xs-6 col-md-3">
   <div class="field">
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
   </div>
+   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <div class ="row top-buffer">
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>
+</div>
+</div>
+</div>
