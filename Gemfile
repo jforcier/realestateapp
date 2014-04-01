@@ -42,6 +42,8 @@ gem 'masonry-rails', '~> 0.2.0'
 
 gem "font-awesome-rails", "~> 4.0.3.1"
 
+gem 'aws-sdk', '~> 1.20.0'
+
 group :assets do
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
   gem 'jquery-ui-rails'
