@@ -36,11 +36,11 @@ gem 'devise', '~> 3.1.1'
 
 gem 'ransack'
 
-gem 'paperclip', '~> 3.0'
-
 gem 'masonry-rails', '~> 0.2.0'
 
 gem "font-awesome-rails", "~> 4.0.3.1"
+
+gem 'paperclip', '~> 3.0'
 
 gem 'aws-sdk', '~> 1.20.0'
 
